@@ -1,40 +1,50 @@
 # SigmoidSmoother
 
-Smooth Skygrid Visualizer: Interactive Shiny App for \(G(t,s)\) and \(H(t)\)
+**Smooth Skygrid Visualizer: Interactive Shiny App for $G(t,s)$ and $H(t)$**
 
-This repository contains an interactive **R Shiny** app to visualize two related demographic functions under the **Smooth Skygrid** coalescent model:
+This repository contains an interactive **R Shiny** app to visualize two related demographic functions under the **Smooth Skygrid** coalescent model.
 
-- The **smoothed logistic formulation**  
+---
+
+## Mathematical Formulation
+
+**Smoothed logistic formulation**
+
 $$
-  G(t, s) = \frac{1}{\theta_1} + \sum_{k=1}^M 
-  \frac{\tfrac{1}{\theta_{k+1}} - \tfrac{1}{\theta_k}}{1 + e^{-s (t - x_k)}}
+G(t, s) = \frac{1}{\theta_1}
+          + \sum_{k=1}^{M}
+            \frac{\tfrac{1}{\theta_{k+1}} - \tfrac{1}{\theta_k}}
+                 {1 + e^{-s (t - x_k)}}
 $$
 
-- The **step-function analogue**  
+**Step-function analogue**
+
 $$
-  H(t) = \frac{1}{\theta_1} + \sum_{k=1}^M 
-  \left(\tfrac{1}{\theta_{k+1}} - \tfrac{1}{\theta_k}\right)\,\mathbf{1}\{t \ge x_k\}.
+H(t) = \frac{1}{\theta_1}
+       + \sum_{k=1}^{M}
+         \left(\tfrac{1}{\theta_{k+1}} - \tfrac{1}{\theta_k}\right)\,\mathbf{1}\{t \ge x_k\}
 $$
 
-Here, \(\theta_j\) are effective population size parameters, \(x_k\) are grid points in time, and \(s\) controls the steepness of the transitions. As \(s \to \infty\), \(G(t,s)\) converges to the step function \(H(t)\).
+Here, $\theta_j$ are effective population size parameters, $x_k$ are grid points in time, and $s$ controls the steepness of the transitions.  
+As $s \to \infty$, $G(t,s)$ converges to the step function $H(t)$.
 
 ---
 
 ## Features
 
 - Interactive sliders to set:
-  - Number of transitions (\(M\))  
-  - Steepness parameter (\(s\))  
-  - Time range \([t_{\min}, t_{\max}]\)  
+  - Number of transitions ($M$)  
+  - Steepness parameter ($s$)  
+  - Time range $[t_{\min}, t_{\max}]$  
 
-- Dynamic input panels for custom \(\theta_j\) values and transition times \(x_k\)  
+- Dynamic input panels for custom $\theta_j$ values and transition times $x_k$  
 
 - Options to:
   - Auto-space knots across the time interval  
-  - Auto-smooth \(\theta_j\) values with a sinusoidal default  
-  - Toggle log-scale plotting for \(H(t)\)  
+  - Auto-smooth $\theta_j$ values with a sinusoidal default  
+  - Toggle log-scale plotting for $H(t)$  
 
-- Side-by-side plots of \(G(t,s)\) (continuous logistic) and \(H(t)\) (step function)  
+- Side-by-side plots of $G(t,s)$ (continuous logistic) and $H(t)$ (step function)  
 
 - Diagnostics panel showing the current parameter configuration  
 
