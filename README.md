@@ -5,16 +5,16 @@ Smooth Skygrid Visualizer: Interactive Shiny App for \(G(t,s)\) and \(H(t)\)
 This repository contains an interactive **R Shiny** app to visualize two related demographic functions under the **Smooth Skygrid** coalescent model:
 
 - The **smoothed logistic formulation**  
-  \[
+$$
   G(t, s) = \frac{1}{\theta_1} + \sum_{k=1}^M 
   \frac{\tfrac{1}{\theta_{k+1}} - \tfrac{1}{\theta_k}}{1 + e^{-s (t - x_k)}}
-  \]
+$$
 
 - The **step-function analogue**  
-  \[
+$$
   H(t) = \frac{1}{\theta_1} + \sum_{k=1}^M 
   \left(\tfrac{1}{\theta_{k+1}} - \tfrac{1}{\theta_k}\right)\,\mathbf{1}\{t \ge x_k\}.
-  \]
+$$
 
 Here, \(\theta_j\) are effective population size parameters, \(x_k\) are grid points in time, and \(s\) controls the steepness of the transitions. As \(s \to \infty\), \(G(t,s)\) converges to the step function \(H(t)\).
 
