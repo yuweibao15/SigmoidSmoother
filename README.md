@@ -58,10 +58,8 @@ $$
 
 2. Grid points equally spanned  
 
-$$
-x_k = t_{\min} + \frac{k}{M+1}(t_{\max} - t_{\min}),
-\quad k = 1,2,\dots,M
-$$
+$x_k = t_{min} + \dfrac{k}{M+1}(t_{max} - t_{min}), \quad k = 1,2,\dots,M$
+
 ---
 
 ## Installation
