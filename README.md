@@ -49,16 +49,19 @@ As $s \to \infty$, $G(t,s)$ converges to the step function $H(t)$.
 - Diagnostics panel showing the current parameter configuration  
 
 - Details:
-1. default effective population sizes
-$
-\theta_j^{\text{default}} \;=\; 8000 \;+\; 3000 \cdot \sin\!\Big(\tfrac{j\pi}{M}\Big),
-\quad j = 0,1,\dots,M $
+1. Default effective population sizes  
 
-2. grid points equally spanned:
-$
-x_k \;=\; t_{\min} \;+\; \frac{k}{M+1}\,(t_{\max} - t_{\min}),
-\quad k=1,2,\dots,M 
-$
+$$
+\theta_j^{default} = 8000 + 3000 \cdot \sin\!\left(\frac{j\pi}{M}\right),
+\quad j = 0,1,\dots,M
+$$
+
+2. Grid points equally spanned  
+
+$$
+x_k = t_{\min} + \frac{k}{M+1}(t_{\max} - t_{\min}),
+\quad k = 1,2,\dots,M
+$$
 ---
 
 ## Installation
