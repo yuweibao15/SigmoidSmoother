@@ -22,7 +22,7 @@ $$
 $$
 H(t) = \frac{1}{\theta_1}
        + \sum_{k=1}^{M}
-         \left(\tfrac{1}{\theta_{k+1}} - \tfrac{1}{\theta_k}\right)\,\mathbf{1}\{t \ge x_k\}
+         \left(\tfrac{1}{\theta_{k+1}} - \tfrac{1}{\theta_k}\right)\ \mathbf{1}\{t \ge x_k\}
 $$
 
 Here, $\theta_j$ are effective population size parameters, $x_k$ are grid points in time, and $s$ controls the steepness of the transitions.  
